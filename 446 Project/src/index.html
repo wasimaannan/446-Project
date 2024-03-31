@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Patient Management System</h1>
+    
+    <h2>Add Patient Data</h2>
+    <form id="addPatientForm">
+        <label for="patientId">Patient ID:</label>
+        <input type="text" id="patientId" name="patientId"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender"><br><br>
+        <button type="button" onclick="addPatientData()">Add Patient</button>
+    </form>
+
+    <h2>Update Patient Data (Admin)</h2>
+    <form id="updatePatientForm">
+        <label for="patientAddress">Patient Address:</label>
+        <input type="text" id="patientAddress" name="patientAddress"><br><br>
+        <label for="vaccineStatus">Vaccine Status:</label>
+        <input type="text" id="vaccineStatus" name="vaccineStatus"><br><br>
+        <label for="isDead">Is Dead:</label>
+        <input type="checkbox" id="isDead" name="isDead"><br><br>
+        <button type="button" onclick="updatePatientData()">Update Patient Data</button>
+    </form>
+
+    <h2>Fetch COVID Trend Data</h2>
+    <button type="button" onclick="fetchCovidTrendData()">Fetch COVID Trend Data</button>
+
+    <h2>Generate Vaccine Certificate</h2>
+    <form id="generateCertificateForm">
+        <label for="patientAddressCertificate">Patient Address:</label>
+        <input type="text" id="patientAddressCertificate" name="patientAddressCertificate"><br><br>
+        <button type="button" onclick="generateVaccineCertificate()">Generate Certificate</button>
+    </form>
+</body>
+</html>
